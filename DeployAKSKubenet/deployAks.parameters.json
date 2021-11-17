@@ -3,49 +3,49 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "aksName": {
-            "value": "aks001"
+            "value": "IA07-RG01-aks01"
         },
         "aksDnsPrefix" : {
-             "value": "aks001-cluster01"   
+             "value": "IA07-RG01-aks01"
         },
         "aksRG":{
-            "value": "rg-MyOrg-AppName-Networking-dev"
+            "value": "IA07-RG01"
         },
         "aksManagedRG": {
-            "value": "rg-MyOrg-AppName-Networking-dev-MC"
+            "value": "IA07-RG01-aks01-MC"
         },
         "aksVnetRG": {
-            "value": "rg-MyOrg-AppName-Networking-dev"
+            "value": "IA07-RG01"
         },
         "vnetName": {
-            "value": "vnet-MyOrg-AppName-Prod"
+            "value": "IA07-RG01-Vnet"
         },
         "aksSnetID": {
-            "value": "/subscriptions/9f7d100a-8183-4f45-bf95-6b119241cce0/resourceGroups/rg-MyOrg-AppName-Networking-dev/providers/Microsoft.Network/virtualNetworks/vnet-MyOrg-AppName-Prod/subnets/snet-aksNodes"
+            "value": "/subscriptions/201cd9d8-2edb-4eee-9190-68dcd50263b0/resourceGroups/IA07-RG01/providers/Microsoft.Network/virtualNetworks/IA07-RG01-Vnet/subnets/IA07-RG01-Subnet01"
         },
         "isAksPrivate": {
             "value": true
         },
         "serviceCidr": {
-            "value": "10.0.0.0/16"
+            "value": "172.16.34.0/23"
         },
         "dnsServiceIP": {
-            "value": "10.0.0.10"
+            "value": "172.16.34.10"
         },
         "podCidr": {
-            "value": "10.244.0.0/16"
+            "value": "172.16.40.0/21"
         },
         "dockerBridgeCidr": {
-            "value": "172.17.0.1/16"
+            "value": "172.16.48.1/23"
         },
         "aksLogAnalyticsWSName" : {
-            "value": "aksLogAnalyticsWS"
+            "value": "IA07-RG01-loganalytics01"
         },
         "systemAgentVMSize" : {
             "value": "Standard_DS2_v2"
         },
         "userAgentVMSize": {
-            "value": "Standard_DS3_v2"
+            "value": "Standard_F8s_v2"
         }
 
     }

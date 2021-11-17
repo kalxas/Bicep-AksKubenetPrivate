@@ -7,7 +7,7 @@ green='\e[1;32m%s\e[0m\n'
 blue='\e[1;34m%s\e[0m\n'
 
 # Set your Azure Subscription
-SUBSCRIPTION=9f7d100a-8183-4f45-bf95-6b119241cce0
+SUBSCRIPTION=201cd9d8-2edb-4eee-9190-68dcd50263b0
 
 DEPLOYMENT_NAME=deployAks
 PARAM_FILE="./${DEPLOYMENT_NAME}.parameters.json"
