@@ -9,7 +9,7 @@ blue='\e[1;34m%s\e[0m\n'
 # Set your Azure Subscription
 SUBSCRIPTION=201cd9d8-2edb-4eee-9190-68dcd50263b0
 
-DEPLOYMENT_NAME=deployAks
+DEPLOYMENT_NAME=deployAksProd
 PARAM_FILE="./${DEPLOYMENT_NAME}.parameters.json"
 RG_NAME=$(cat $PARAM_FILE | jq -r .parameters.aksRG.value)
 RG_VNET_NAME=$(cat $PARAM_FILE | jq -r .parameters.aksVnetRG.value)
