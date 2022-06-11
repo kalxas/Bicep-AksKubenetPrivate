@@ -3,43 +3,43 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "aksName": {
-            "value": "IA07-RG01-aks01"
+            "value": "IA07-RG02-aks01"
         },
         "aksDnsPrefix" : {
-             "value": "IA07-RG01-aks01"
+             "value": "IA07-RG02-aks01"
         },
         "aksRG":{
-            "value": "IA07-RG01"
+            "value": "IA07-RG02"
         },
         "aksManagedRG": {
-            "value": "IA07-RG01-aks01-MC"
+            "value": "IA07-RG02-aks01-MC"
         },
         "aksVnetRG": {
-            "value": "IA07-RG01"
+            "value": "IA07-RG02"
         },
         "vnetName": {
-            "value": "IA07-RG01-Vnet"
+            "value": "IA07-RG02-Vnet"
         },
         "aksSnetID": {
-            "value": "/subscriptions/201cd9d8-2edb-4eee-9190-68dcd50263b0/resourceGroups/IA07-RG01/providers/Microsoft.Network/virtualNetworks/IA07-RG01-Vnet/subnets/IA07-RG01-Subnet01"
+            "value": "/subscriptions/201cd9d8-2edb-4eee-9190-68dcd50263b0/resourceGroups/IA07-RG02/providers/Microsoft.Network/virtualNetworks/IA07-RG02-Vnet/subnets/IA07-RG02-Subnet01"
         },
         "isAksPrivate": {
             "value": true
         },
         "serviceCidr": {
-            "value": "172.16.34.0/23"
+            "value": "172.19.0.0/16"
         },
         "dnsServiceIP": {
-            "value": "172.16.34.10"
+            "value": "172.19.34.10"
         },
         "podCidr": {
-            "value": "172.16.40.0/21"
+            "value": "172.20.0.0/16"
         },
         "dockerBridgeCidr": {
-            "value": "172.16.48.1/23"
+            "value": "172.21.0.1/16"
         },
         "aksLogAnalyticsWSName" : {
-            "value": "IA07-RG01-loganalytics01"
+            "value": "IA07-RG02-loganalytics01"
         },
         "systemAgentVMSize" : {
             "value": "Standard_DS2_v2"
