@@ -66,6 +66,9 @@ param dockerBridgeCidr string = '172.17.0.1/16'
 @description('The log analytics workspace of AKS (for container monitoring etc)')
 param aksLawsName string 
 
+@description('The AKS kubernetes version')
+param kubernetesVersion string = '1.21.9'
+
 //TODO 1: conditional handling of enableAutoScaling: false
 //TODO 2: Check if gpuInstanceProfile is needed
 //TODO 3: check enableUltraSSD
@@ -82,6 +85,7 @@ resource aks 'Microsoft.ContainerService/managedClusters@2021-03-01' = {
     enableRBAC: enableRBAC
     dnsPrefix: aksDnsPrefix
     nodeResourceGroup: aksManagedRG
+    kubernetesVersion: kubernetesVersion
     agentPoolProfiles: [
       {
         name: 'systempool'
@@ -172,6 +176,7 @@ output aksID string = aks.id
 output aksName string = aks.name
 output apiServerAddress string = isAksPrivate ? aks.properties.privateFQDN : ''
 output aksNodesRG string = aks.properties.nodeResourceGroup
+output aksKubernetesVersion = aks.properties.kubernetesVersion
 output identity object = {
   tenantId: aks.identity.tenantId
   principalId: aks.identity.principalId
