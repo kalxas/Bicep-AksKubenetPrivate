@@ -176,7 +176,7 @@ output aksID string = aks.id
 output aksName string = aks.name
 output apiServerAddress string = isAksPrivate ? aks.properties.privateFQDN : ''
 output aksNodesRG string = aks.properties.nodeResourceGroup
-output aksKubernetesVersion = aks.properties.kubernetesVersion
+output aksKubernetesVersion string = aks.properties.kubernetesVersion
 output identity object = {
   tenantId: aks.identity.tenantId
   principalId: aks.identity.principalId
