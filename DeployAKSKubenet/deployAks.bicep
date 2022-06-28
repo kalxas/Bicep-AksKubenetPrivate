@@ -7,6 +7,7 @@ param resourceTags object = {}
 
 // params exported on param file
 param aksName string 
+param aksKubernetesVersion string
 param aksRG string 
 param aksManagedRG string 
 param aksVnetRG string 
@@ -27,6 +28,7 @@ module aks 'Modules/aks-kubenet.module.bicep' = {
   name: 'AKSDeployment'
   params: {
     name: aksName
+    kubernetesVersion: aksKubernetesVersion
     region: resourceGroup().location
     tags: resourceTags
     vnetSubnetID: aksSnetID
@@ -46,6 +48,7 @@ module aks 'Modules/aks-kubenet.module.bicep' = {
 
 output aksID string = aks.outputs.aksID
 output aksName string = aks.outputs.aksName
+output aksKubernetesVersion string = aks.outputs.aksKubernetesVersion
 output aksApiServerAddress string = aks.outputs.apiServerAddress
 output aksNodesRG string = aks.outputs.aksNodesRG
 output aksTenantID string = aks.outputs.identity.tenantId

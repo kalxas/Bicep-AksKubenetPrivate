@@ -5,6 +5,9 @@
         "aksName": {
             "value": "IA07-RG02-aks01"
         },
+        "aksKubernetesVersion": {
+            "value": "1.21.9"
+        },
         "aksDnsPrefix" : {
              "value": "IA07-RG02-aks01"
         },
